@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swiftbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ji-kE-xFE">
+                                <rect key="frame" x="116" y="570" width="182" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U2W-k5-gSK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfP-NI-KMN">
+                                <rect key="frame" x="58" y="237" width="299" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hC-lI-VhI">
+                                <rect key="frame" x="116" y="531" width="182" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Action 2"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCu-c1-Bjl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyk-bx-OW4">
+                                <rect key="frame" x="116" y="492" width="182" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Action 1"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1M-9m-VD5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.47302827380952384" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6hC-lI-VhI" firstAttribute="top" secondItem="jyk-bx-OW4" secondAttribute="bottom" constant="8" symbolic="YES" id="1zM-ce-ma3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ji-kE-xFE" secondAttribute="trailing" constant="116" id="3iF-zv-VDM"/>
+                            <constraint firstItem="jyk-bx-OW4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C3X-XL-lmY"/>
+                            <constraint firstItem="jyk-bx-OW4" firstAttribute="width" secondItem="6hC-lI-VhI" secondAttribute="width" id="ENc-8l-o0s"/>
+                            <constraint firstItem="6hC-lI-VhI" firstAttribute="width" secondItem="0ji-kE-xFE" secondAttribute="width" id="GiT-As-HIz"/>
+                            <constraint firstItem="0ji-kE-xFE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="HAf-aV-em4"/>
+                            <constraint firstItem="6hC-lI-VhI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="obX-UB-4p9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ji-kE-xFE" secondAttribute="bottom" constant="261" id="xDj-0w-32y"/>
+                            <constraint firstItem="0ji-kE-xFE" firstAttribute="top" secondItem="6hC-lI-VhI" secondAttribute="bottom" constant="8" symbolic="YES" id="yws-LK-GEO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="0ji-kE-xFE" id="EbP-M9-tRU"/>
+                        <outlet property="label" destination="VfP-NI-KMN" id="Be9-YS-7cP"/>
+                        <outletCollection property="actionButtons" destination="jyk-bx-OW4" collectionClass="NSMutableArray" id="2JQ-8S-fMT"/>
+                        <outletCollection property="actionButtons" destination="6hC-lI-VhI" collectionClass="NSMutableArray" id="xXh-R8-BKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="93.75"/>
+        </scene>
+    </scenes>
+</document>
